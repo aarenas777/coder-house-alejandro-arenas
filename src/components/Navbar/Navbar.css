@@ -1,0 +1,41 @@
+.navbar-container{
+    width: 100%;
+    background-color: #1572A1;
+    display: flex;
+    padding: 40px;
+}
+
+.navbar-inicio{
+    width: 7%;
+    color: white;
+}
+
+.navbar-inicio_span:hover{
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+.navbar-productos{
+    width: 8%;
+    color: white;
+}
+
+.navbar-productos_span:hover{
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+.navbar-description{
+    width: 10%;
+    color: white;
+}
+
+.navbar-descripcion_span{
+    color: white;
+}
+
+.navbar-descripcion_span:hover{
+    border-bottom: 1px solid white;
+    cursor: pointer;
+  
+}
