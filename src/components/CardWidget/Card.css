@@ -1,0 +1,10 @@
+.product_container{
+    display: flex;
+    padding: 40px;
+}
+
+.card_product-info{
+    width: 200px;
+    height: 300px;
+    margin: 0 40px;
+}

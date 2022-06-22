@@ -39,3 +39,13 @@
     cursor: pointer;
   
 }
+
+.navbar_car-icon{
+    width: 68%;
+    text-align: end;
+}
+
+.navbar_car-icon svg{
+   color: white;
+   font-size: 10px;
+}
