@@ -1,6 +1,9 @@
 import { CardContent, Typography } from '@mui/material'
 import Card from "@mui/material/Card";
 import React from 'react'
+import { Contador } from "../Contador/Contador"
+import Box from '@mui/material/Box';
+
 import './Card.css';
 
 
@@ -22,30 +25,32 @@ export const CardWidget = ({ name }) => {
             name: "Zapatos Puma",
             precio: "17.000"
         },
-        {
-            name: "Zapatos Balenciaga",
-            precio: "20.000"
-        },
+
 
 
     ]
     return (
         <div className="product_container">
-            {Products.map((card) =>{
+            {Products.map((card) => {
                 return (
                     <Card className="card_product-info">
-                    <CardContent>
-                        <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
-                            {card.name}
-                        </Typography>
-                        <Typography variant="h9" component="div">
-                            Precio: ${card.precio}
-                        </Typography>
-                    </CardContent>
-                </Card>
+                        <CardContent>
+                            <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
+                                {card.name}
+                            </Typography>
+                            <Box mt={16}>
+                                <Typography variant="h9" component="div">
+                                    Precio: ${card.precio}
+                                </Typography>
+                            </Box>
+                            <Box mt={5} mr={2}>
+                                <Contador />
+                            </Box>
+                        </CardContent>
+                    </Card>
                 )
             })}
-           
+
         </div>
     )
 }
