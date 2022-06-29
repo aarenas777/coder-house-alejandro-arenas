@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import "./Contador.css"
 
 
-export const Contador = () => {
+export const Contador = (props) => {
   const [number, setNumber] = useState(0)
   const sumar = () => setNumber(number + 1)
   const restar = () => setNumber(number - 1)
@@ -27,6 +27,9 @@ export const Contador = () => {
 
       <Box marginLeft="18%" mt={6}>
         <Button style={{textTransform:"inherit"}} variant="contained" className="btn_add-car"> Agregar al carrito </Button>
+      </Box>
+      <Box marginLeft="11%" mt={2}>
+        <Button style={{textTransform:"inherit"}} variant="outlined" className="btn_add-car"> Ver detalle del producto </Button>
       </Box>
     </>
   )

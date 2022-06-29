@@ -7,50 +7,32 @@ import Box from '@mui/material/Box';
 import './Card.css';
 
 
-export const CardWidget = ({ name }) => {
-    const Products = [
-        {
-            name: "Zapatos Nike",
-            precio: "10.000"
-        },
-        {
-            name: "Zapatos Jordan",
-            precio: "18.000"
-        },
-        {
-            name: "Zapatos Adidas",
-            precio: "19.000"
-        },
-        {
-            name: "Zapatos Puma",
-            precio: "17.000"
-        },
+export const CardWidget = (props) => {
 
-
-
-    ]
     return (
         <div className="product_container">
-            {Products.map((card) => {
-                return (
-                    <Card className="card_product-info">
-                        <CardContent>
-                            <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
-                                {card.name}
-                            </Typography>
-                            <Box mt={16}>
-                                <Typography variant="h9" component="div">
-                                    Precio: ${card.precio}
-                                </Typography>
-                            </Box>
-                            <Box mt={5} mr={2}>
-                                <Contador />
-                            </Box>
-                        </CardContent>
-                    </Card>
-                )
-            })}
-
+            <Card className="card_product-info">
+                <CardContent>
+                    <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
+                        {props.nombre}
+                    </Typography>
+                    <Box mt={4}>
+                        <div  class="columx2">
+                            <div class="pleca2">
+                                <img alt="" src={props.imagen}></img>
+                            </div>
+                        </div>
+                    </Box>
+                    <Box mt={4}>
+                        <Typography variant="h9" component="div">
+                            Precio: ${props.precio}
+                        </Typography>
+                    </Box>
+                    <Box mt={5} mr={2}>
+                        <Contador />
+                    </Box>
+                </CardContent>
+            </Card>
         </div>
     )
 }

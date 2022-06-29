@@ -1,14 +1,15 @@
 
 import './App.css';
-import { CardWidget } from './components/CardWidget/Card';
+
+import Dashboard from './components/Dashboard/Dashboard';
 import { Navbar } from './components/Navbar/Navbar';
 
 
 function App() {
   return (
-    <div>
+    <div style={{width: "100%"}}>
       <Navbar/>
-      <CardWidget name={"Zapatos"}/>
+      <Dashboard/>
 
     </div>
   );

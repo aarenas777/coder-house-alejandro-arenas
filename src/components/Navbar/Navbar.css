@@ -1,5 +1,5 @@
 .navbar-container{
-    width: 100%;
+    width: auto;
     background-color: #1572A1;
     display: flex;
     padding: 40px;
@@ -47,5 +47,5 @@
 
 .navbar_car-icon svg{
    color: white;
-   font-size: 10px;
+   font-size: 30px;
 }
