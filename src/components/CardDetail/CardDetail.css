@@ -1,0 +1,21 @@
+.product_container{
+    display: flex;
+    padding: 40px;
+}
+
+.card_product-info{
+    width: 300px;
+    height: auto;
+    margin: 0 40px;
+}
+
+.columx2 {
+	width: 100%;
+
+	box-sizing: border-box;
+}
+
+.columx2 img {
+	width: 100%;
+	margin: auto;
+}

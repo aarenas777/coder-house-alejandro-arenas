@@ -3,12 +3,10 @@ import Card from "@mui/material/Card";
 import React from 'react'
 import { Contador } from "../Contador/Contador"
 import Box from '@mui/material/Box';
-import "./Card.css"
+import "./CardDetail.css"
 
 
-
-
-export const CardWidget = (props) => {
+export const CardDetail = (props) => {
 
     return (
         <div className="product_container">
@@ -26,11 +24,8 @@ export const CardWidget = (props) => {
                     </Box>
                     <Box mt={4}>
                         <Typography variant="h9" component="div">
-                            Precio: ${props.precio}
+                        {props.descripcion}
                         </Typography>
-                    </Box>
-                    <Box mt={5}>
-                        <Contador />
                     </Box>
                 </CardContent>
             </Card>
