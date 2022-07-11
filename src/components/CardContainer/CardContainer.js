@@ -1,35 +1,27 @@
 import { useEffect, useState } from "react";
-import { CardDetail } from "../CardDetail/CardDetail";
+
+import {CardList} from "../CardList/CardList"
 
 
 function CardContainer() {
 
+
     const [info, setInfo] = useState([])
 
-
     useEffect(() => {
-        setTimeout(() => {
-            fetch('data.json')
-                .then((resp) => resp.json())
-                .then((data) => setInfo(data));
-        }, 2000);
-    }, []);
+       
+        fetch('data.json')
+            .then((resp) => resp.json())
+            .then((data) => setInfo(data));
+      }, []);
 
-   
+
 
 
     return (
-        <div style={{ display: "flex" }}>
-       
-            {info && info.map((product) => {
-                return (
-                        <CardDetail nombre={product.nombre} imagen={product.imagen} descripcion={product.descripcion}/>
-              
-                )
-            }
-            )
-            }
-
+        <div style={{display:"flex"}}>
+      
+        <CardList style={{display:"flex"}} cards={info}></CardList>
         </div>
     );
 }

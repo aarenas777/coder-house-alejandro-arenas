@@ -1,23 +1,10 @@
 [
     {
+        "id": 2346234723462342634,
         "nombre": "Retrovisores",
         "stock": 20,
         "precio": 40000,
         "imagen": "https://imagenes.elpais.com/resizer/z2zvDGn3Kj7QsJ7PECH85NDlW8Q=/414x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/BP4YSTPOKRGR7M2PVRD2RA7ASA.webp",
         "descripcion": "Los espejos retrovisores son elementos básicos en lo que respecta a la seguridad activa de la moto. Estos espejos son los que nos permiten ver qué ocurre por detrás de nosotros" 
-    },
-    {
-        "nombre": "Tablero",
-        "stock":50,
-        "precio": 200000,
-        "imagen": "https://tvsperu.com/wp-content/uploads/2019/09/5-beneficios-de-tener-un-velocimetro-digital-en-la-moto.png",        
-        "descripcion": "Su función básicamente es brindar la posibilidad de que la moto pueda avanzar" 
-    },
-    {
-        "nombre": "Mofle",
-        "stock":40,
-        "precio": 300000,
-        "imagen": "https://www.motorecambiosvferrer.es/modules/prestablog/views/img/old-grid/up-img/19.jpg",
-        "descripcion": "Los escapes para motos son dispositivos fundamentales para el correcto funcionamiento de un motor de explosión. Su función es evacuar hacia el exterior los gases que se producen en la combustión, contribuyendo también a reducir la temperatura de los humos y a retener algunas partículas contaminantes." 
     }
 ]

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { CardDetail } from "../CardDetail/CardDetail";
 import { CardWidget } from "../CardWidget/Card";
 
 function Dashboard() {
@@ -23,7 +24,7 @@ function Dashboard() {
             {info && info.map((product) => {
                 return (
                 
-                        <CardWidget nombre={product.nombre} precio={product.precio} imagen={product.imagen} />
+                        <CardDetail nombre={product.nombre} precio={product.precio} imagen={product.imagen} />
               
                 )
             }

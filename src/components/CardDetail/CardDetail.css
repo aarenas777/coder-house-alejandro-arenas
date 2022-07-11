@@ -1,12 +1,14 @@
 .product_container{
     display: flex;
     padding: 40px;
+width: 100%;
 }
 
 .card_product-info{
     width: 300px;
     height: auto;
     margin: 0 40px;
+    display: flex;
 }
 
 .columx2 {

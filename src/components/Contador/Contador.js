@@ -12,6 +12,9 @@ export const Contador = (props) => {
   return (
     <>
       <div style={{ display: "flex" }}>
+
+
+
         <Box mr={4} marginLeft="10px">
           <Button disabled={number === 0 ? true : false} variant="outlined" onClick={restar}> -1 </Button>
         </Box>
@@ -21,16 +24,24 @@ export const Contador = (props) => {
         </Box>
 
         <Box ml={4}>
-          <Button  variant="contained" onClick={sumar}> +1 </Button>
+          <Button variant="contained" onClick={sumar}> +1 </Button>
         </Box>
       </div>
 
+
       <Box marginLeft="18%" mt={6}>
-        <Button style={{textTransform:"inherit"}} variant="contained" className="btn_add-car"> Agregar al carrito </Button>
+        <Button
+          style={{ textTransform: "inherit" }}
+          variant="contained"
+          disabled={number === 0 ? true : false} 
+          onClick={props.onAdd}
+          className="btn_add-car">
+          Agregar al carrito
+        </Button>
       </Box>
-      <Box marginLeft="11%" mt={2}>
+      {/*  <Box marginLeft="11%" mt={2}>
         <Button style={{textTransform:"inherit"}} variant="outlined" className="btn_add-car"> Ver detalle del producto </Button>
-      </Box>
+      </Box> */}
     </>
   )
 }

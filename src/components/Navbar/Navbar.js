@@ -2,6 +2,7 @@ import { IconButton } from '@mui/material';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import React from 'react'
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   return (
@@ -9,19 +10,25 @@ export const Navbar = () => {
 
       <div className="navbar-inicio">
         <span className="navbar-inicio_span">
-          Inicio
+          <Link to="/">
+            Inicio
+          </Link>
         </span>
       </div>
 
       <div className="navbar-productos">
         <span className="navbar-productos_span">
-          Productos
+          <Link to="/products">
+            Productos
+          </Link>
         </span>
       </div>
 
       <div className="navbar-descripcion">
         <span className="navbar-descripcion_span">
-          ¿Quiénes somos?
+          <Link to="/">
+            ¿Quiénes somos?
+          </Link>
         </span>
       </div>
       <div className="navbar_car-icon">
