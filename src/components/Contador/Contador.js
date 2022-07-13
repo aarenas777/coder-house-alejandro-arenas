@@ -39,9 +39,7 @@ export const Contador = (props) => {
           Agregar al carrito
         </Button>
       </Box>
-      {/*  <Box marginLeft="11%" mt={2}>
-        <Button style={{textTransform:"inherit"}} variant="outlined" className="btn_add-car"> Ver detalle del producto </Button>
-      </Box> */}
+    
     </>
   )
 }

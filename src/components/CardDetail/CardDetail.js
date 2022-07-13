@@ -1,6 +1,6 @@
 import { CardContent, Typography } from '@mui/material'
 import Card from "@mui/material/Card";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Contador } from "../Contador/Contador"
 import Box from '@mui/material/Box';
 import "./CardDetail.css"
@@ -12,11 +12,19 @@ export const CardDetail = (props) => {
     const params = useParams()
     const [info, setInfo] = useState([])
     const [showCounter, setShowCounter] = useState(false)
+
+    
     const fetchCardDetail = () => {
         fetch(`data.json/${params.id}`)
-            .then((resp) => resp.json())
-            .then((data) => setInfo(data));
+        .then((resp) => resp.json())
+        .then((data) => {
+            setInfo(data)});
     }
+
+    useEffect(() => {
+        fetchCardDetail()
+      }, []);
+
     const onAdd = () => {
         setShowCounter(true)
     }
@@ -26,18 +34,18 @@ export const CardDetail = (props) => {
             <Card className="card_product-info">
                 <CardContent>
                     <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
-                        {props.nombre}
+                        {info.length !== 0 && info[0].id}
                     </Typography>
                     <Box mt={4}>
                         <div class="columx2">
                             <div class="pleca2">
-                                <img alt="" src={props.imagen}></img>
+                                <img alt="" src={info.length !== 0 && info[0].imagen}></img>
                             </div>
                         </div>
                     </Box>
                     <Box mt={4}>
                         <Typography variant="h9" component="div">
-                            {props.descripcion}
+                        {info.length !== 0 && info[0].precio}
                         </Typography>
                     </Box>
                     <Box mt={4}>
@@ -46,7 +54,7 @@ export const CardDetail = (props) => {
                                 Ir a mi carrito
                             </Link>
                         ) : (
-                        <Contador onAdd={onAdd} />
+                            <Contador onAdd={onAdd} />
                         )}
                     </Box>
                 </CardContent>

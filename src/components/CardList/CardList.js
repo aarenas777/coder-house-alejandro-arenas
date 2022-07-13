@@ -3,16 +3,16 @@ import { CardWidget } from "../CardWidget/Card";
 
 export const CardList = (props) => {
     return (
-      <div>
+      <div style={{display:"flex"}}>
 
         {props.cards.map((card) => {
             return( 
-            <CardDetail
+            <CardWidget
                 id={card.id}
-                imagen={card.imagen}
                 nombre={card.nombre}
-                descripcion={card.descripcion}
-            ></CardDetail>)
+                imagen={card.imagen}
+                precio={card.precio}
+            ></CardWidget>)
         } )}
 
       </div>
