@@ -10,7 +10,7 @@ function CardContainer() {
 
     useEffect(() => {
 
-        fetch('data.json')
+        fetch('https://www.breakingbadapi.com/api/characters')
             .then((resp) => resp.json())
             .then((data) => setInfo(data));
     }, []);

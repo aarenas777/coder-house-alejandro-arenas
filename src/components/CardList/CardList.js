@@ -8,10 +8,10 @@ export const CardList = (props) => {
         {props.cards.map((card) => {
             return( 
             <CardWidget
-                id={card.id}
-                nombre={card.nombre}
-                imagen={card.imagen}
-                precio={card.precio}
+                id={card.char_id}
+                name={card.name}
+                img={card.img}
+                nickname={card.nickname}
             ></CardWidget>)
         } )}
 

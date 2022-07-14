@@ -15,7 +15,7 @@ export const CardDetail = (props) => {
 
     
     const fetchCardDetail = () => {
-        fetch(`data.json/${params.id}`)
+        fetch(`https://www.breakingbadapi.com/api/characters/${params.id}`)
         .then((resp) => resp.json())
         .then((data) => {
             setInfo(data)});
@@ -34,18 +34,18 @@ export const CardDetail = (props) => {
             <Card className="card_product-info">
                 <CardContent>
                     <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
-                        {info.length !== 0 && info[0].id}
+                        {info.length !== 0 && info[0].name}
                     </Typography>
                     <Box mt={4}>
                         <div class="columx2">
                             <div class="pleca2">
-                                <img alt="" src={info.length !== 0 && info[0].imagen}></img>
+                                <img alt="" src={info.length !== 0 && info[0].img}></img>
                             </div>
                         </div>
                     </Box>
                     <Box mt={4}>
                         <Typography variant="h9" component="div">
-                        {info.length !== 0 && info[0].precio}
+                        {info.length !== 0 && info[0].nickname}
                         </Typography>
                     </Box>
                     <Box mt={4}>
