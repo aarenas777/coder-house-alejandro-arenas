@@ -23,7 +23,7 @@ export const CardDetail = (props) => {
 
     useEffect(() => {
         fetchCardDetail()
-      }, []);
+      });
 
     const onAdd = () => {
         setShowCounter(true)

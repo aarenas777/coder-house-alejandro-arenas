@@ -6,7 +6,7 @@ import { CardDetail } from './components/CardDetail/CardDetail';
 import { Cart } from './components/Cart/Cart';
 import Dashboard from './components/Dashboard/Dashboard';
 import { Navbar } from './components/Navbar/Navbar';
-import { CartContext } from './context/CartContext';
+
 
 
 function App() {

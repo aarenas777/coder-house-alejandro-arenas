@@ -1,11 +1,10 @@
-import { Button, CardContent, Typography } from '@mui/material'
+import { CardContent, Typography } from '@mui/material'
 import Card from "@mui/material/Card";
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import { Contador } from "../Contador/Contador"
 import Box from '@mui/material/Box';
 import "./Card.css"
 import { Link } from 'react-router-dom';
-import {CartContext} from "../../context/CartContext"
 
 
 

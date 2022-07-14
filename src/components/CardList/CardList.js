@@ -1,4 +1,3 @@
-import { CardDetail } from "../CardDetail/CardDetail";
 import { CardWidget } from "../CardWidget/Card";
 
 export const CardList = (props) => {
