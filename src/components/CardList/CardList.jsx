@@ -13,6 +13,8 @@ export const CardList = (props) => {
               name={card.name}
               image={card.image}
               price={card.price}
+              description = {card.description}
+              stock={props.stock}
             />)
         })}
 

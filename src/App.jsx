@@ -13,7 +13,7 @@ import { CartContext } from './context/CartContext';
 
 function App() {
   return (
-    <CartContext>
+    <>
       <Navbar />
       <Routes>
         <Route exact path="/products" element={<Dashboard />}></Route>
@@ -21,7 +21,7 @@ function App() {
         <Route exact path="/" element={<CardContainer />}></Route>
         <Route exact path="/cart" element={<Cart />}></Route>
       </Routes>
-    </CartContext>
+    </>
   );
 }
 

@@ -5,32 +5,31 @@ import { Contador } from "../Contador/Contador"
 import Box from '@mui/material/Box';
 import "./CardDetail.css"
 import { Link } from 'react-router-dom';
+import { doc, getDoc, getFirestore } from '@firebase/firestore';
 
 
 
 export const CardDetail = (props) => {
     const [showCounter, setShowCounter] = useState(false)
+    const [detail, setDetail] = useState([])
 
     const onAdd = () => {
         setShowCounter(true)
     }
-    useEffect(() => {
-        console.log(props);
-      }, []);
 
     return (
         <div className="product_container">
             <Card className="card_product-info">
                 <CardContent>
                     <Typography sx={{ fontSize: 18 }} color="text.secondary" gutterBottom>
-                        {props.name}
+                        {detail.name}
                     </Typography>
                     <Box mt={4}>
 
                     </Box>
                     <Box mt={4}>
                         <Typography variant="h9" component="div">
-                            {props.description}
+                            {detail.description}
                         </Typography>
                     </Box>
                     <Box mt={4}>
