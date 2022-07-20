@@ -13,7 +13,7 @@ import { CartContext } from './context/CartContext';
 
 function App() {
   return (
-    <>
+    <> //TODO: Queda pendiente validar con tutor lo del context
       <Navbar />
       <Routes>
         <Route exact path="/products" element={<Dashboard />}></Route>
