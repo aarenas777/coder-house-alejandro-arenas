@@ -15,7 +15,6 @@ export const Navbar = () => {
           </Link>
         </span>
       </div>
-
       <div className="navbar-productos">
         <span className="navbar-productos_span">
           <Link to="/products">
@@ -23,7 +22,6 @@ export const Navbar = () => {
           </Link>
         </span>
       </div>
-
       <div className="navbar-descripcion">
         <span className="navbar-descripcion_span">
           <Link to="/">
@@ -36,7 +34,6 @@ export const Navbar = () => {
           <AddShoppingCartIcon />
         </IconButton>
       </div>
-
     </div>
   )
 }
