@@ -1,28 +1,31 @@
 
-import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import CardContainer from './components/CardContainer/CardContainer';
-import { CardDetail } from './components/CardDetail/CardDetail';
-import { Cart } from './components/Cart/Cart';
-import Dashboard from './components/Dashboard/Dashboard';
-import { Navbar } from './components/Navbar/Navbar';
-import { CartContext } from './context/CartContext';
-
-
-
+import {  Route, Routes } from "react-router-dom";
+import { CartContextProvider } from './store/cart-context';
+import NavBar from "./components/Navbar/NavBar";
+import Cart from "./pages/Cart/Cart";
+import Home from "./pages/Home/Home";
+import ItemListContainer from "./pages/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer";
 
 function App() {
   return (
-    <> //TODO: Queda pendiente validar con tutor lo del context
-      <Navbar />
-      <Routes>
-        <Route exact path="/products" element={<Dashboard />}></Route>
-        <Route exact path="/products/:id" element={<CardDetail />}></Route>
-        <Route exact path="/" element={<CardContainer />}></Route>
-        <Route exact path="/cart" element={<Cart />}></Route>
-      </Routes>
-    </>
+    <CartContextProvider>
+      <div className='cuerpo' style={{backgroundColor:"#876445"}}>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home/>}></Route>
+            <Route path="/inicio" element={<Home/>}></Route>
+            <Route path="/productos" element={<ItemListContainer />}></Route>
+            <Route path="/producto/:productName" element={<ItemDetailContainer />}></Route>
+            <Route path="/categoria/:category" element={<ItemListContainer />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+          </Routes>
+      </div>
+    </CartContextProvider>
+      
+    
   );
 }
+
 
 export default App;
