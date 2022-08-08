@@ -1,11 +1,10 @@
 import './Cart.css';
-
 import {Col, Container, Row} from 'react-bootstrap';
-
-
 import React from 'react';
+import ItemCart from '../../components/ItemCart/ItemCart';
 import TotalCart from '../../components/TotalCart';
-import ItemCart from '../../components/TotalCart';
+
+
 
 function Cart() {
 
@@ -21,6 +20,9 @@ function Cart() {
                       <Row>
                         <Col md={8} className="contenedorDetalles">
                           <ItemCart />
+                        </Col>
+                        <Col md={4}>
+                          <TotalCart />
                         </Col>
                       </Row>
                     </Container>

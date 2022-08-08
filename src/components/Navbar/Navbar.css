@@ -30,6 +30,7 @@
 .menu__link:focus {
     outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
     outline-offset: var(--menuLinkOutlineOffset);
+    border: none;
 }
 
 

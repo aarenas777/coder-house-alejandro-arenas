@@ -10,7 +10,7 @@ import ItemDetailContainer from "./pages/ItemDetailContainer/ItemDetailContainer
 function App() {
   return (
     <CartContextProvider>
-      <div className='cuerpo' style={{backgroundColor:"#876445"}}>
+      <div className='cuerpo' style={{backgroundColor:"#876445", height: "100% "}}>
           <NavBar />
           <Routes>
             <Route path="/" element={<Home/>}></Route>

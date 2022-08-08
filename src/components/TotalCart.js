@@ -5,12 +5,12 @@ import React, { useContext, useState } from 'react';
 import CartContext from '../store/cart-context';
 import { Link } from "react-router-dom";
 import ModalFinalizar from './Modal/Modal';
+import "./styles.css"
 
 
 function ItemCart() {
     const { itemsCarrito } = useContext(CartContext);
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     
@@ -43,7 +43,7 @@ function ItemCart() {
                                         <Col className='colTotales'>
                                            
                                             { suma !== 0 && <Link to="#" style={{marginTop:"16px"}} className="btn btn-lg buttonAccent float-end" onClick={handleShow}> Finalizar compra</Link>}
-                                            <Link to="/productos" className="btn btn-lg buttonPrimary float-end mt-3"> Seguir Comprando</Link>
+                                            <Link to="/productos" className="btn btn-lg float-end mt-3 link-back"> Volver al menú</Link>
                                         </Col>
                                     </Row>
                                 </Container>

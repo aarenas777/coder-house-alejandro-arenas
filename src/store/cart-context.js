@@ -8,8 +8,8 @@ export const CartContextProvider = ({defaultValue=[],children}) =>{
         setProductoCart([]);
     }
 
-    const isInCart = (title) => {
-        return productoCart.some((item) => item.item.nombre === title)
+    const isInCart = (nombre) => {
+        return productoCart.some((item) => item.item.nombre === nombre)
     }
 
     const onAdd = (producto, cantCart) => {
@@ -17,7 +17,7 @@ export const CartContextProvider = ({defaultValue=[],children}) =>{
             const newCarrito = [...productoCart]
             for (const element of newCarrito) {
                 if (element.item.nombre === producto.nombre) {
-                    element.stock+=cantCart
+                    element.quality+=cantCart
                 }
             }
             setProductoCart(newCarrito)
@@ -30,8 +30,8 @@ export const CartContextProvider = ({defaultValue=[],children}) =>{
            }
     }
     
-    const deleteCart = (title) =>{
-        const nuevoCart = productoCart.filter( i => i.item.nombre !== title);
+    const deleteCart = (nombre) =>{
+        const nuevoCart = productoCart.filter( i => i.item.nombre !== nombre);
         setProductoCart(nuevoCart);
     }
 

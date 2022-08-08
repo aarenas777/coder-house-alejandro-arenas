@@ -32,7 +32,7 @@ function ItemCount(props){
                             <input type="text" class="form-control" value={cantCart} onChange={guardar}/>
                             <button onClick={sumar} className="input-group-text">+</button>
                         </div>
-                        <button style={{backgroundColor: "#EDDFB3", border:"none", borderRadius:"8px"}} onClick={add}>Agregar al carrito</button>
+                        <Button className="buttonAccent" onClick={add}>Agregar al carrito</Button>
                     </Card.Body>
                 </Card>
             </Col>
