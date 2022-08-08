@@ -3,11 +3,16 @@
 }
 .modal-header, .modal-footer{
     background-color: #edebeb;
-    color: #1d175c;
+    color: #876445
 }
 .form-label{
-    color:#e12257;
+    color:#876445
 }
 .mensajeFinal{
-    color: #1d175c;
+    color: #000;
+}
+.close_button{
+    text-align: end;
+    color: #BECACD;
+    cursor: pointer;
 }
